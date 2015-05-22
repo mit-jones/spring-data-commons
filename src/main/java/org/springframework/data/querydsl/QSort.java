@@ -23,12 +23,12 @@ import java.util.List;
 import org.springframework.data.domain.Sort;
 import org.springframework.util.Assert;
 
-import com.mysema.query.types.Expression;
-import com.mysema.query.types.OrderSpecifier;
-import com.mysema.query.types.Path;
+import com.querydsl.core.types.Expression;
+import com.querydsl.core.types.OrderSpecifier;
+import com.querydsl.core.types.Path;
 
 /**
- * Sort option for queries that wraps a querydsl {@link OrderSpecifier}.
+ * Sort option for queries that wraps a Querydsl {@link OrderSpecifier}.
  * 
  * @author Thomas Darimont
  * @author Christoph Strobl

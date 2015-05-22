@@ -15,7 +15,7 @@
  */
 package org.springframework.data.querydsl;
 
-import com.mysema.query.types.EntityPath;
+import com.querydsl.core.types.EntityPath;
 
 /**
  * Strategy interface to abstract the ways to translate an plain domain class into a {@link EntityPath}.

@@ -21,7 +21,7 @@ import java.lang.reflect.Modifier;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
 
-import com.mysema.query.types.EntityPath;
+import com.querydsl.core.types.EntityPath;
 
 /**
  * Simple implementation of {@link EntityPathResolver} to lookup a query class by reflection and using the static field

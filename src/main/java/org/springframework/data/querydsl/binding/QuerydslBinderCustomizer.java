@@ -15,7 +15,7 @@
  */
 package org.springframework.data.querydsl.binding;
 
-import com.mysema.query.types.EntityPath;
+import com.querydsl.core.types.EntityPath;
 
 /**
  * A component that will customize {@link QuerydslBindings} for the given entity path.

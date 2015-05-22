@@ -18,7 +18,7 @@ package org.springframework.data.querydsl;
 import org.springframework.data.domain.AbstractPageRequest;
 import org.springframework.data.domain.Pageable;
 
-import com.mysema.query.types.OrderSpecifier;
+import com.querydsl.core.types.OrderSpecifier;
 
 /**
  * Basic Java Bean implementation of {@link Pageable} with support for QueryDSL.

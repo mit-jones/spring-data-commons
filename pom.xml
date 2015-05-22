@@ -17,6 +17,7 @@
 
 	<properties>
 		<dist.key>DATACMNS</dist.key>
+		<querydsl>4.0.0</querydsl>
 	</properties>
 
 	<dependencies>
@@ -94,22 +95,24 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!--  Querydsl -->
+
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-core</artifactId>
 			<version>${querydsl}</version>
 			<optional>true</optional>
 		</dependency>
 
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-apt</artifactId>
 			<version>${querydsl}</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.mysema.querydsl</groupId>
+			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-collections</artifactId>
 			<version>${querydsl}</version>
 			<optional>true</optional>
@@ -206,16 +209,22 @@
 				<version>${apt}</version>
 				<executions>
 					<execution>
+						<id>querydsl</id>
 						<phase>generate-test-sources</phase>
 						<goals>
 							<goal>test-process</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/generated-sources/test-annotations</outputDirectory>
-							<processor>com.mysema.query.apt.QuerydslAnnotationProcessor</processor>
+							<processor>com.querydsl.apt.QuerydslAnnotationProcessor</processor>
+							<includes>
+								<include>org.springframework.data.querydsl</include>
+							</includes>
 						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<outputDirectory>${project.build.directory}/generated-sources/annotations</outputDirectory>
+				</configuration>
 			</plugin>
 
 			<plugin>
